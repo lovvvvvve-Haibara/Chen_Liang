@@ -1,0 +1,217 @@
+/* styles.css - 深色主题优先的个人主页样式 */
+
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-soft: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #38bdf8;
+  --primary-strong: #0ea5e9;
+  --border: #334155;
+  --shadow: 0 8px 28px rgba(2, 8, 23, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1120 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1040px, 92%);
+  margin: 0 auto;
+}
+
+/* 导航栏 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.78);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--primary);
+}
+
+/* 简介模块 */
+.hero {
+  padding: 4.5rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* 通用 section 样式 */
+section {
+  padding: 1rem 0 2.5rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* 技能标签 */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag {
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* 项目列表（可展开） */
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.project-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.project-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-item[open] summary {
+  color: var(--primary);
+}
+
+.project-item p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0.7rem 0 0;
+}
+
+.project-item a,
+.contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-item a:hover,
+.contact a:hover,
+.project-item a:focus-visible,
+.contact a:focus-visible {
+  color: var(--primary-strong);
+}
+
+.contact p {
+  margin: 0.5rem 0;
+}
+
+/* 页脚 */
+.site-footer {
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+  margin-top: 2rem;
+  padding: 1.2rem 0 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* 响应式：平板/手机 */
+@media (max-width: 680px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+}

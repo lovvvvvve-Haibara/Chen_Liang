@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chen Liang 的个人主页，展示个人简介、技能、项目和联系方式。" />
+    <title>Chen Liang | Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 页头：包含导航栏 -->
+    <header class="site-header" id="home">
+      <nav class="navbar container" aria-label="主导航">
+        <a class="brand" href="#home">Chen Liang</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 简介模块 -->
+      <section class="hero container" id="about">
+        <img class="avatar" src="https://via.placeholder.com/300x300.png?text=Avatar" alt="Chen Liang 的头像" />
+        <div class="hero-text">
+          <p class="eyebrow">前端开发专家</p>
+          <h1>Chen Liang</h1>
+          <p>
+            我专注于构建高性能、可访问且体验流畅的 Web
+            应用，擅长用现代前端技术打造简约美观的用户界面。
+          </p>
+        </div>
+      </section>
+
+      <!-- 技能模块：使用标签卡片展示技能 -->
+      <section class="skills container" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skill-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript (ES6+)</span>
+          <span class="tag">Responsive Design</span>
+          <span class="tag">Accessibility (a11y)</span>
+          <span class="tag">Git & GitHub</span>
+        </div>
+      </section>
+
+      <!-- 项目模块 -->
+      <section class="projects container" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <!-- 项目列表：点击项目标题后展开详情 -->
+        <ul class="project-list">
+          <li>
+            <details class="project-item">
+              <summary>Portfolio Site</summary>
+              <p>一个响应式个人作品集网站，展示项目案例和技术栈，兼顾性能与可维护性。</p>
+              <p>
+                项目地址：
+                <a href="https://github.com/your-username/portfolio-site" target="_blank" rel="noopener noreferrer">https://github.com/your-username/portfolio-site</a>
+              </p>
+            </details>
+          </li>
+          <li>
+            <details class="project-item">
+              <summary>Task Manager App</summary>
+              <p>轻量级任务管理应用，支持任务分类、状态筛选和本地持久化存储。</p>
+              <p>
+                项目地址：
+                <a href="https://github.com/your-username/task-manager-app" target="_blank" rel="noopener noreferrer">https://github.com/your-username/task-manager-app</a>
+              </p>
+            </details>
+          </li>
+          <li>
+            <details class="project-item">
+              <summary>Landing Page Kit</summary>
+              <p>可复用的落地页模板套件，包含多种区块组件与深色主题，方便快速搭建页面。</p>
+              <p>
+                项目地址：
+                <a href="https://github.com/your-username/landing-page-kit" target="_blank" rel="noopener noreferrer">https://github.com/your-username/landing-page-kit</a>
+              </p>
+            </details>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 联系方式模块 -->
+      <section class="contact container" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:chenliang@example.com">chenliang@example.com</a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">https://github.com/your-username</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <p>© 2026 Chen Liang. Built for GitHub Pages.</p>
+    </footer>
+  </body>
+</html>
