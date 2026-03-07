@@ -88,10 +88,9 @@ img {
 }
 
 .avatar {
-  width: 160px;
-  height: 160px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  border: 3px solid var(--primary);
   object-fit: cover;
   box-shadow: var(--shadow);
 }
