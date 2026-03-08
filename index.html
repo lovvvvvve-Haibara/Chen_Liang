@@ -11,110 +11,185 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+    <div class="ambient ambient-c" aria-hidden="true"></div>
+
     <header class="site-header" id="home">
       <nav class="navbar container" aria-label="主导航">
-        <a class="brand" href="#home">梁辰</a>
+        <a class="brand" href="#about">梁辰</a>
         <ul class="nav-links">
           <li><a href="#about">关于我</a></li>
           <li><a href="#education">教育背景</a></li>
           <li><a href="#projects">项目经历</a></li>
-          <li><a href="#skills">技能与工具</a></li>
-          <li><a href="#ai">AI 能力</a></li>
+          <li><a href="#capability">能力体系</a></li>
           <li><a href="#awards">获奖情况</a></li>
           <li><a href="#contact">联系方式</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero container" id="about">
-        <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
-        <div class="hero-text">
-          <h1>梁辰</h1>
-          <p class="hero-role">求职意向：技术型 AI 产品经理</p>
+    <section class="motto-bar" aria-label="个人格言">
+      <p class="motto-typewriter" data-texts="理解用户，构建未来。|Understand users, build the future.|代码连接世界，AI赋能未来。|Code connects the world, AI empowers the future."></p>
+    </section>
+
+    <main class="container">
+      <section class="hero" id="about">
+        <div class="hero-main card">
+          <p class="kicker">TECH-ORIENTED AI PM CANDIDATE</p>
+          <h1>梁辰 Chen-Liang</h1>
+          <p class="hero-role">求职意向：<span style="font-weight: bold;font-size: 1.8em;">技术型 AI 产品经理</span></p>
+          <p class="hero-summary">
+            具备计算机与商科复合背景，能够在用户洞察与技术实现之间建立有效连接。拥有 0-1 产品规划与多轮迭代经验，熟悉需求拆解、优先级排序与版本管理。
+            具备扎实的用户研究与数据分析能力，能够将访谈与问卷结果转化为可落地的产品方案。具备跨团队协作与项目推进能力，执行力强，结果导向。<br>
+            聚焦 AI 产品设计、用户研究与工程落地。擅长把复杂技术抽象为可执行产品路径，推进从需求洞察、PRD、研发协同到迭代验证的完整闭环。
+          </p>
+        </div>
+
+        <aside class="hero-side card">
+          <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
           <ul class="hero-facts">
-            <li><strong>年龄：</strong>22</li>
-            <li><strong>邮箱：</strong><a href="mailto:1033098392@qq.com">1033098392@qq.com</a></li>
-            <li><strong>电话：</strong><a href="tel:13529187049">13529187049</a></li>
-            <li><strong>GPA：</strong>3.8/4.5</li>
-            <li><strong>专业排名：</strong>29</li>
+            <li><span>年龄</span><strong>22</strong></li>
+            <li><span>GPA</span><strong>3.8 / 4.5</strong></li>
+            <li><span>排名</span><strong>29</strong></li>
+            <li><span>电话</span><strong>13529187049</strong></li>
+            <li><span>邮箱</span><strong>1033098392@qq.com</strong></li>
           </ul>
+        </aside>
+      </section>
+
+      <section class="section card" id="education">
+        <div class="section-head">
+          <h2>教育背景</h2>
+          <p>课程采用“分组折叠 + 气泡标签”结构，后续可持续扩展。</p>
+        </div>
+
+        <article class="edu-overview">
+          <div class="edu-school">
+            <img class="edu-logo" src="images/SZU_logo.png" alt="深圳大学校徽" />
+            <div>
+              <h3>深圳大学 · 计算机科学与技术（本科）</h3>
+              <p>2023.09 - 2027.06</p>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span>专业成绩：3.8/4.5</span>
+            <span>专业排名：29</span>
+            <span>校级“双创之星”奖学金一等奖</span>
+          </div>
+        </article>
+
+        <div class="course-matrix">
+          <details class="course-group">
+            <summary><span>修读课程</span><span class="count">3类 / 54门</span></summary>
+            <div class="course-clusters">
+              <details class="course-cluster">
+                <summary>
+                  <h4>计算机与AI核心课程（30）</h4>
+                  <span class="count">30门</span>
+                </summary>
+                <div class="tag-cloud">
+                  <span class="course-chip"><b>数据结构</b><em>Core</em></span>
+                  <span class="course-chip"><b>算法设计与分析</b><em>Core</em></span>
+                  <span class="course-chip"><b>数据库系统</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机网络</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机系统（1）-组成概论</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机系统（2）</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机系统（3）</b><em>Core</em></span>
+                  <span class="course-chip"><b>程序设计基础</b><em>Core</em></span>
+                  <span class="course-chip"><b>Java程序设计</b><em>Core</em></span>
+                  <span class="course-chip"><b>程序设计综合实训</b><em>Core</em></span>
+                  <span class="course-chip"><b>软件工程</b><em>Core</em></span>
+                  <span class="course-chip"><b>数字电路</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机图形学</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机视觉</b><em>Core</em></span>
+                  <span class="course-chip"><b>自然语言处理</b><em>Core</em></span>
+                  <span class="course-chip"><b>基于Web的编程</b><em>Core</em></span>
+                  <span class="course-chip"><b>Web开发及人机交互导论</b><em>Core</em></span>
+                  <span class="course-chip"><b>数据科学导论</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机类专业导论</b><em>Core</em></span>
+                  <span class="course-chip"><b>计算机伦理</b><em>Core</em></span>
+                  <span class="course-chip"><b>高等数学C（1）</b><em>Math</em></span>
+                  <span class="course-chip"><b>高等数学C（2）</b><em>Math</em></span>
+                  <span class="course-chip"><b>高等数学A（1）</b><em>Math</em></span>
+                  <span class="course-chip"><b>线性代数</b><em>Math</em></span>
+                  <span class="course-chip"><b>概率论与数理统计</b><em>Math</em></span>
+                  <span class="course-chip"><b>离散数学</b><em>Math</em></span>
+                  <span class="course-chip"><b>专业英语</b><em>ENG</em></span>
+                  <span class="course-chip"><b>学术英语写作基础</b><em>ENG</em></span>
+                  <span class="course-chip"><b>大学英语（1）</b><em>ENG</em></span>
+                  <span class="course-chip"><b>大学英语（2）</b><em>ENG</em></span>
+                </div>
+              </details>
+
+              <details class="course-cluster">
+                <summary>
+                  <h4>产品与商业洞察课程（5）</h4>
+                  <span class="count">5门</span>
+                </summary>
+                <div class="tag-cloud">
+                  <span class="course-chip"><b>管理学原理</b><em>Biz</em></span>
+                  <span class="course-chip"><b>微观经济学</b><em>Biz</em></span>
+                  <span class="course-chip"><b>商业伦理与社会责任</b><em>Biz</em></span>
+                  <span class="course-chip"><b>质性研究方法</b><em>Research</em></span>
+                  <span class="course-chip"><b>创新思维</b><em>Product</em></span>
+                </div>
+              </details>
+
+              <details class="course-cluster">
+                <summary>
+                  <h4>其他课程（19）</h4>
+                  <span class="count">19门</span>
+                </summary>
+                <div class="tag-cloud">
+                  <span class="course-chip"><b>中国近现代史纲要</b><em>Humanities</em></span>
+                  <span class="course-chip"><b>思想道德与法治</b><em>Humanities</em></span>
+                  <span class="course-chip"><b>毛泽东思想和中国特色社会主义理论体系概论</b><em>Humanities</em></span>
+                  <span class="course-chip"><b>改革开放与深圳特区实践</b><em>Humanities</em></span>
+                  <span class="course-chip"><b>习近平新时代中国特色社会主义思想概论</b><em>Humanities</em></span>
+                  <span class="course-chip"><b>形势与政策</b><em>Humanities</em></span>
+                  <span class="course-chip"><b>大学生心理健康</b><em>General</em></span>
+                  <span class="course-chip"><b>大学生国家安全教育</b><em>General</em></span>
+                  <span class="course-chip"><b>军事理论</b><em>General</em></span>
+                  <span class="course-chip"><b>大学计算机</b><em>General</em></span>
+                  <span class="course-chip"><b>定向越野俱乐部</b><em>Sports</em></span>
+                  <span class="course-chip"><b>男子篮球俱乐部</b><em>Sports</em></span>
+                  <span class="course-chip"><b>排球俱乐部</b><em>Sports</em></span>
+                  <span class="course-chip"><b>壁球俱乐部</b><em>Sports</em></span>
+                  <span class="course-chip"><b>面向未来的创新创业概论</b><em>Practice</em></span>
+                  <span class="course-chip"><b>区块链行业与创新创业对接范式</b><em>Practice</em></span>
+                  <span class="course-chip"><b>大数据行业与创新创业对接范式</b><em>Practice</em></span>
+                  <span class="course-chip"><b>大学生劳动教育</b><em>Practice</em></span>
+                  <span class="course-chip"><b>军事技能</b><em>Practice</em></span>
+                </div>
+              </details>
+            </div>
+          </details>
         </div>
       </section>
 
-      <section class="education container" id="education" aria-labelledby="education-title">
-        <h2 id="education-title">教育背景</h2>
-        <article class="education-card">
-          <div class="education-head">
-            <img class="edu-logo" src="images/SZU_logo.png" alt="深圳大学校徽" />
-            <div>
-              <h3>深圳大学 · 计算机科学与技术专业（本科）</h3>
-              <p class="education-time">2023.09 - 2027.06</p>
-            </div>
-          </div>
-          <p>荣获校级“双创之星”奖学金一等奖。</p>
+      <section class="section card" id="projects">
+        <div class="section-head">
+          <h2>项目经历</h2>
+          <p>默认仅显示标题，点击展开详情；关键词统一使用气泡标签。</p>
+        </div>
 
-          <div class="course-matrix">
-            <details class="course-group" open>
-              <summary>
-                <span>计算机核心课程</span>
-                <span class="course-count">6+</span>
-              </summary>
-              <div class="course-tags">
-                <span class="keyword-bubble">数据库系统（A）</span>
-                <span class="keyword-bubble">计算机系统（A*）</span>
-                <span class="keyword-bubble">数据结构（A）</span>
-                <span class="keyword-bubble">软件工程（A）</span>
-                <span class="keyword-bubble">数据科学导论（A）</span>
-                <span class="keyword-bubble">计算机视觉（A）</span>
-              </div>
-            </details>
-
-            <details class="course-group" open>
-              <summary>
-                <span>商科与研究方法课程</span>
-                <span class="course-count">3+</span>
-              </summary>
-              <div class="course-tags">
-                <span class="keyword-bubble">管理学原理（A）</span>
-                <span class="keyword-bubble">微观经济学（A）</span>
-                <span class="keyword-bubble">质性研究方法（B*）</span>
-              </div>
-            </details>
-
-            <details class="course-group">
-              <summary>
-                <span>预留分组（可继续扩展）</span>
-                <span class="course-count">0</span>
-              </summary>
-              <div class="course-tags">
-                <span class="keyword-bubble">可继续新增课程标签</span>
-              </div>
-            </details>
-          </div>
-        </article>
-      </section>
-
-      <section class="projects container" id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">项目经历</h2>
         <ul class="project-list">
           <li>
             <details class="project-item">
               <summary>
-                <span class="project-summary-title">AI 用户研究——管理学院 SeekTouch 实验室（团队负责人）</span>
+                <span class="title">AI 用户研究——管理学院 SeekTouch 实验室（团队负责人）</span>
+                <span class="meta">2023.10 - 2025.03</span>
               </summary>
-              <div class="project-content">
-                <div class="project-content-inner">
-                  <p class="project-time">2023.10 - 2025.03</p>
-                  <div class="project-media-slot">
-                    <span>项目图片插槽（可选）</span>
-                  </div>
-                  <ul class="project-points">
-                    <li>在导师指导下，围绕“AI 外语口语学习”场景开展用户研究，采用扎根理论完成“访谈—编码—建模”流程。</li>
-                    <li>组织团队完成 3000 份问卷数据分析，形成结构化研究报告并识别关键痛点。</li>
-                    <li>结合有道 Hi Echo 等产品场景，评估 AI 对学习效果影响并提出优化方向。</li>
-                    <li>带队参加全国大学生市场调研与分析大赛，输出市场研究报告与产品策略建议。</li>
+              <div class="project-body">
+                <div class="project-inner">
+                  <ul>
+                    <li>围绕“AI 外语口语学习”场景开展扎根理论研究，完成“访谈—编码—建模”流程并构建需求模型。</li>
+                    <li>组织 3000 份问卷数据分析，验证用户行为量表，识别学习动机、反馈与交互体验痛点。</li>
+                    <li>结合有道 Hi Echo 等产品场景评估学习效果影响因素，输出产品优化方向。</li>
+                    <li>带队参加全国大学生市场调研与分析大赛，形成完整市场研究报告与策略建议。</li>
                   </ul>
+                  <div class="project-media-slot">项目图片插槽（可选）</div>
                 </div>
               </div>
             </details>
@@ -123,30 +198,28 @@
           <li>
             <details class="project-item">
               <summary>
-                <span class="project-summary-title">AI 产品实践——“林下客”AI 林下经济管理生态（团队负责人 / AI 产品策划 / 开发）</span>
+                <span class="title">AI 产品实践——“林下客”AI 林下经济管理生态（团队负责人 / AI 产品策划 / 开发）</span>
+                <span class="meta">2025.01 - 2026.03</span>
               </summary>
-              <div class="project-content">
-                <div class="project-content-inner">
-                  <p class="project-time">2025.01 - 2026.03</p>
-                  <div class="project-media-slot">
-                    <span>项目图片插槽（可选）</span>
-                  </div>
-                  <ul class="project-points">
-                    <li>主导设计开发 AI 驱动平台（Web + App + 小程序），解决云南乡镇林下经济管理中的信息与效率问题。</li>
-                    <li>平台累计服务 3000+ 移动端用户，覆盖云南 8 个地州市。</li>
-                    <li>设计 LLM + RAG 知识服务系统，实现政策解读、种植建议、病虫害咨询等智能问答。</li>
-                    <li>参与全栈开发（Vue3 / Spring Boot / Kotlin），并推进知识库接入与接口设计。</li>
-                    <li>主导 PRD 与版本规划，推动 3 轮迭代；调研收集 100+ 用户反馈持续优化。</li>
-                    <li>项目获深圳大学专项经费资助 16000 元。</li>
+              <div class="project-body">
+                <div class="project-inner">
+                  <ul>
+                    <li>面向云南乡镇信息分散与政策获取困难场景，主导设计开发 Web + App + 小程序平台。</li>
+                    <li>累计服务 3000+ 移动端用户，覆盖云南 8 个地州市。</li>
+                    <li>设计 LLM + RAG 知识服务系统，实现政策解读、种植建议、病虫害咨询等能力。</li>
+                    <li>参与 Vue3 / Spring Boot / Kotlin 全栈开发，完成知识库接入与接口协同。</li>
+                    <li>主导 PRD 与版本规划，推进 3 轮迭代并落地 100+ 用户反馈优化。</li>
+                    <li>项目获得深圳大学专项经费资助 16000 元。</li>
                   </ul>
-                  <div class="project-keywords">
+                  <div class="tag-cloud">
                     <span class="keyword-bubble">Spring Boot</span>
-                    <span class="keyword-bubble">Vue</span>
+                    <span class="keyword-bubble">Vue3</span>
                     <span class="keyword-bubble">Android Kotlin</span>
                     <span class="keyword-bubble">MySQL</span>
                     <span class="keyword-bubble">RESTful API</span>
                     <span class="keyword-bubble">LLM + RAG</span>
                   </div>
+                  <div class="project-media-slot">项目图片插槽（可选）</div>
                 </div>
               </div>
             </details>
@@ -155,24 +228,57 @@
           <li>
             <details class="project-item">
               <summary>
-                <span class="project-summary-title">A Survey of Long-Sequence Time-Series Forecasting Methods Based on Deep Learning</span>
+                <span class="title">基于机器学习与集成模型的房价预测系统（House Price Prediction with Ensemble Learning）</span>
+                <span class="meta">Machine Learning / Kaggle</span>
               </summary>
-              <div class="project-content">
-                <div class="project-content-inner">
-                  <p class="project-time">研究文档 / Survey Paper</p>
+              <div class="project-body">
+                <div class="project-inner">
                   <p>
-                    <strong>Abstract：</strong>
-                    Long-sequence time-series forecasting (LSTF) is crucial for many real-world applications but remains challenging due to long-range dependencies, non-stationarity, noise, and error accumulation over long horizons. This work surveys recent deep learning approaches for LSTF and organizes them into several key methodological directions.
+                    基于房屋属性数据集构建房价预测模型。项目首先完成探索性数据分析（EDA），覆盖数据规模、特征类型、缺失值分布与特征相关性；
+                    随后通过异常值检测、缺失值填充、特征类型转换、独热编码、特征归一化等特征工程步骤提升训练质量。
                   </p>
-                  <div class="project-keywords">
-                    <span class="keyword-bubble">Long-sequence time-series forecasting</span>
-                    <span class="keyword-bubble">Deep learning</span>
+                  <p>
+                    在建模阶段实现并比较 Lasso Regression、ElasticNet、Gradient Boosting、XGBoost、LightGBM、Kernel Ridge Regression 等回归模型，
+                    采用 K-Fold 交叉验证评估性能。最终通过 Stacking Ensemble 融合多模型预测结果，进一步提升准确性与稳定性。
+                  </p>
+                  <div class="tag-cloud">
+                    <span class="keyword-bubble">房价预测</span>
+                    <span class="keyword-bubble">机器学习</span>
+                    <span class="keyword-bubble">特征工程</span>
+                    <span class="keyword-bubble">集成学习</span>
+                    <span class="keyword-bubble">模型堆叠</span>
+                    <span class="keyword-bubble">XGBoost</span>
+                    <span class="keyword-bubble">LightGBM</span>
+                  </div>
+                  <p>
+                    连接：
+                    <a href="https://www.kaggle.com/code/jonasexcepy/fork-v3-6-2385b9" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/code/jonasexcepy/fork-v3-6-2385b9</a>
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="project-item">
+              <summary>
+                <span class="title">A Survey of Long-Sequence Time-Series Forecasting Methods Based on Deep Learning</span>
+                <span class="meta">Survey Paper</span>
+              </summary>
+              <div class="project-body">
+                <div class="project-inner">
+                  <p>
+                    Long-sequence time-series forecasting (LSTF) remains challenging due to long-range dependencies,
+                    non-stationarity, noise, and error accumulation. This survey summarizes attention-based methods,
+                    multi-resolution/frequency modeling, graph-based dependencies, and foundation-model paradigms.
+                  </p>
+                  <div class="tag-cloud">
+                    <span class="keyword-bubble">LSTF</span>
+                    <span class="keyword-bubble">Deep Learning</span>
                     <span class="keyword-bubble">Transformers</span>
-                    <span class="keyword-bubble">Multi-resolution modeling</span>
-                    <span class="keyword-bubble">Graph neural networks</span>
-                    <span class="keyword-bubble">Foundation models</span>
-                    <span class="keyword-bubble">Robust forecasting</span>
-                    <span class="keyword-bubble">Uncertainty quantification</span>
+                    <span class="keyword-bubble">Multi-resolution</span>
+                    <span class="keyword-bubble">Graph Neural Networks</span>
+                    <span class="keyword-bubble">Foundation Models</span>
+                    <span class="keyword-bubble">Uncertainty Quantification</span>
                   </div>
                   <p>
                     文档：
@@ -186,16 +292,16 @@
           <li>
             <details class="project-item">
               <summary>
-                <span class="project-summary-title">基于语义保持改写的欺诈对话检测模型鲁棒性分析</span>
+                <span class="title">基于语义保持改写的欺诈对话检测模型鲁棒性分析</span>
+                <span class="meta">NLP Robustness</span>
               </summary>
-              <div class="project-content">
-                <div class="project-content-inner">
-                  <p class="project-time">研究文档 / NLP Robustness</p>
+              <div class="project-body">
+                <div class="project-inner">
                   <p>
-                    <strong>摘要：</strong>
-                    随着互联网金融与智能客服系统的发展，欺诈行为逐渐从单轮文本演变为多轮交互式对话。本文基于语义保持改写，对欺诈对话检测模型鲁棒性进行系统分析，并引入 ABP 框架生成同义词替换型对抗样本，比较原始数据与改写数据上的性能差异。
+                    基于语义保持自然改写，对欺诈对话检测模型鲁棒性开展系统分析。引入 ABP 框架构建同义词替换型对抗样本，
+                    对比模型在原始数据与改写数据上的性能差异，验证模型对表达变化的敏感性并讨论鲁棒性增强路径。
                   </p>
-                  <div class="project-keywords">
+                  <div class="tag-cloud">
                     <span class="keyword-bubble">欺诈对话检测</span>
                     <span class="keyword-bubble">对抗样本</span>
                     <span class="keyword-bubble">语义保持改写</span>
@@ -213,14 +319,17 @@
         </ul>
       </section>
 
-      <section class="skills container" id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title">技能与工具</h2>
-        <div class="skill-groups">
+      <section class="section card" id="capability">
+        <div class="section-head">
+          <h2>能力体系</h2>
+          <p>产品能力 + 工程能力 + AI 能力一体化。</p>
+        </div>
+        <div class="cap-grid">
           <article class="skill-group">
             <h3>产品能力</h3>
             <ul>
-              <li>用户调研（深度访谈 / 问卷设计 / 扎根理论分析）</li>
-              <li>产品需求拆解与功能设计</li>
+              <li>用户调研（深度访谈 / 问卷设计 / 扎根理论）</li>
+              <li>需求拆解与功能设计</li>
               <li>商业模式设计与商业计划书撰写</li>
             </ul>
           </article>
@@ -228,48 +337,34 @@
             <h3>技术能力</h3>
             <ul>
               <li>C / C++ / Python / Java / Kotlin</li>
-              <li>熟悉 SpringBoot、Vue3</li>
-              <li>熟悉 Web / Android 开发流程</li>
+              <li>SpringBoot、Vue3</li>
+              <li>Web / Android 开发流程</li>
             </ul>
           </article>
           <article class="skill-group">
-            <h3>工具能力</h3>
+            <h3>AI 能力</h3>
             <ul>
-              <li>SPSS 数据分析</li>
-              <li>Linux 基本操作</li>
-              <li>常见 IDE</li>
+              <li>Prompt 结构化设计</li>
+              <li>RAG 架构与知识库集成</li>
+              <li>前后端与 AI 系统协同接口设计</li>
             </ul>
           </article>
           <article class="skill-group">
-            <h3>语言能力</h3>
+            <h3>工具与语言</h3>
             <ul>
-              <li>CET-6</li>
-              <li>IELTS 6.0</li>
+              <li>SPSS、Linux、常见 IDE</li>
+              <li>ChatGPT、Coze、Cursor</li>
+              <li>CET-6、IELTS 6.0</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section class="ai container" id="ai" aria-labelledby="ai-title">
-        <h2 id="ai-title">AI 技能</h2>
-        <div class="skill-groups">
-          <article class="skill-group">
-            <h3>AI 产品能力</h3>
-            <p>可基于行业场景与用户需求完成 AI 功能设计，具备结构化 Prompt 设计经验，并掌握 RAG 系统架构与知识库集成流程。</p>
-          </article>
-          <article class="skill-group">
-            <h3>AI 编程能力</h3>
-            <p>熟悉 Web 与 Android Kotlin 全栈开发流程，能够设计和实现高效 API，支持前后端与 AI 系统协同。</p>
-          </article>
-          <article class="skill-group">
-            <h3>AI 工具</h3>
-            <p>熟练使用 ChatGPT、Coze、Cursor，并应用于产品设计、知识库接入与 AI 功能实现。</p>
-          </article>
+      <section class="section card" id="awards">
+        <div class="section-head">
+          <h2>获奖情况</h2>
+          <p>时间 / 奖项 / 等级</p>
         </div>
-      </section>
-
-      <section class="awards-section container" id="awards" aria-labelledby="awards-title">
-        <h2 id="awards-title">获奖情况</h2>
         <ul class="awards-list">
           <li class="award-item">
             <span class="award-time">2023.04</span>
@@ -294,8 +389,11 @@
         </ul>
       </section>
 
-      <section class="contact container" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">联系方式</h2>
+      <section class="section card contact" id="contact">
+        <div class="section-head">
+          <h2>联系方式</h2>
+          <p>欢迎联系交流 AI 产品、用户研究与技术落地。</p>
+        </div>
         <p>Email: <a href="mailto:1033098392@qq.com">1033098392@qq.com</a></p>
         <p>Phone: <a href="tel:13529187049">13529187049</a></p>
       </section>
@@ -304,5 +402,12 @@
     <footer class="site-footer">
       <p>© 2026 Liang Chen · Personal Resume</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
