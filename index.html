@@ -36,25 +36,61 @@
     <main class="container">
       <section class="hero" id="about">
         <div class="hero-main card">
-          <p class="kicker">TECH-ORIENTED AI PM CANDIDATE</p>
-          <h1>梁辰 Chen-Liang</h1>
-          <p class="hero-role">求职意向：<span style="font-weight: bold;font-size: 1.8em;">技术型 AI 产品经理</span></p>
-          <p class="hero-summary">
-            具备计算机与商科复合背景，能够在用户洞察与技术实现之间建立有效连接。拥有 0-1 产品规划与多轮迭代经验，熟悉需求拆解、优先级排序与版本管理。
-            具备扎实的用户研究与数据分析能力，能够将访谈与问卷结果转化为可落地的产品方案。具备跨团队协作与项目推进能力，执行力强，结果导向。<br>
-            聚焦 AI 产品设计、用户研究与工程落地。擅长把复杂技术抽象为可执行产品路径，推进从需求洞察、PRD、研发协同到迭代验证的完整闭环。
-          </p>
+          <p class="kicker hero-identity">TECH-ORIENTED AI PM CANDIDATE</p>
+
+          <h1 class="hero-name">
+            <span class="name-cn">梁辰</span>
+            <span class="name-en">Chen-Liang</span>
+          </h1>
+
+          <div class="hero-position" aria-label="职业定位">
+            <span>技术型 AI 产品经理</span>
+            <span>AI Product Manager</span>
+          </div>
+
+          <div class="hero-skill-tags" aria-label="核心能力标签">
+            <span class="hero-chip">用户研究</span>
+            <span class="hero-chip">产品设计</span>
+            <span class="hero-chip">工程落地</span>
+            <span class="hero-chip">AI系统</span>
+            <span class="hero-chip">Web开发</span>
+            <span class="hero-chip">Android开发</span>
+            <span class="hero-chip">RAG</span>
+            <span class="hero-chip">Prompt Engineering</span>
+          </div>
+
+          <ul class="hero-summary-list">
+            <li>具备计算机与商科复合背景，能够连接用户需求、产品设计与技术实现。</li>
+            <li>拥有 0-1 产品规划、用户研究、需求拆解与跨团队协作经验。</li>
+            <li>聚焦 AI 产品设计与工程落地，擅长推动从需求洞察到迭代验证的完整闭环。</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">查看项目</a>
+            <a class="btn btn-secondary" href="document/CV.pdf" download>下载简历</a>
+            <a class="btn btn-secondary" href="#contact">联系我</a>
+          </div>
         </div>
 
-        <aside class="hero-side card">
-          <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
-          <ul class="hero-facts">
-            <li><span>年龄</span><strong>22</strong></li>
-            <li><span>GPA</span><strong>3.8 / 4.5</strong></li>
-            <li><span>排名</span><strong>29</strong></li>
-            <li><span>电话</span><strong>13529187049</strong></li>
-            <li><span>邮箱</span><strong>1033098392@qq.com</strong></li>
-          </ul>
+        <aside class="hero-side hero-profile-card card" aria-label="个人摘要卡">
+          <div class="avatar-wrap">
+            <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
+          </div>
+
+          <div class="stat-grid" aria-label="核心数据">
+            <article class="stat-item">
+              <strong>22</strong>
+              <span>年龄</span>
+            </article>
+            <article class="stat-item">
+              <strong>3.8 / 4.5</strong>
+              <span>GPA</span>
+            </article>
+            <article class="stat-item">
+              <strong>29</strong>
+              <span>排名</span>
+            </article>
+          </div>
         </aside>
       </section>
 
@@ -322,42 +358,56 @@
       <section class="section card" id="capability">
         <div class="section-head">
           <h2>能力体系</h2>
-          <p>产品能力 + 工程能力 + AI 能力一体化。</p>
+          <p>产品能力、工程能力与 AI 能力一体化。</p>
         </div>
-        <div class="cap-grid">
-          <article class="skill-group">
+        <p class="cap-overview">
+          <span style="color: #06b6d4;">Product</span>
+          ×
+          <span style="color: #10b981;">Engineering</span>
+          ×
+          <span style="color: #f59e42;">AI</span>
+        </p>
+
+        <div class="cap-main-grid">
+          <article class="cap-card">
             <h3>产品能力</h3>
-            <ul>
-              <li>用户调研（深度访谈 / 问卷设计 / 扎根理论）</li>
-              <li>需求拆解与功能设计</li>
-              <li>商业模式设计与商业计划书撰写</li>
-            </ul>
+            <p class="cap-desc">从用户洞察到方案定义，形成可执行的产品闭环。</p>
+            <div class="cap-tags">
+              <span class="cap-tag">用户调研</span>
+              <span class="cap-tag">需求拆解与功能设计</span>
+              <span class="cap-tag">商业模式设计</span>
+            </div>
           </article>
-          <article class="skill-group">
-            <h3>技术能力</h3>
-            <ul>
-              <li>C / C++ / Python / Java / Kotlin</li>
-              <li>SpringBoot、Vue3</li>
-              <li>Web / Android 开发流程</li>
-            </ul>
+
+          <article class="cap-card">
+            <h3>工程能力</h3>
+            <p class="cap-desc">具备多栈开发能力，支持产品从方案到落地交付。</p>
+            <div class="cap-tags">
+              <span class="cap-tag">C / C++ / Python / Java / Kotlin</span>
+              <span class="cap-tag">SpringBoot / Vue3</span>
+              <span class="cap-tag">Web / Android 开发流程</span>
+            </div>
           </article>
-          <article class="skill-group">
+
+          <article class="cap-card">
             <h3>AI 能力</h3>
-            <ul>
-              <li>Prompt 结构化设计</li>
-              <li>RAG 架构与知识库集成</li>
-              <li>前后端与 AI 系统协同接口设计</li>
-            </ul>
-          </article>
-          <article class="skill-group">
-            <h3>工具与语言</h3>
-            <ul>
-              <li>SPSS、Linux、常见 IDE</li>
-              <li>ChatGPT、Coze、Cursor</li>
-              <li>CET-6、IELTS 6.0</li>
-            </ul>
+            <p class="cap-desc">兼顾 AI 功能设计与技术实现，强化系统协同效率。</p>
+            <div class="cap-tags">
+              <span class="cap-tag">Prompt 结构化设计</span>
+              <span class="cap-tag">RAG 架构与知识库集成</span>
+              <span class="cap-tag">前后端与 AI 系统接口设计</span>
+            </div>
           </article>
         </div>
+
+        <article class="cap-tools">
+          <h3>工具与语言</h3>
+          <div class="cap-tags cap-tags-muted">
+            <span class="cap-tag">SPSS / Linux / IDE</span>
+            <span class="cap-tag">ChatGPT / Coze / Cursor</span>
+            <span class="cap-tag">CET-6 / IELTS 6.0</span>
+          </div>
+        </article>
       </section>
 
       <section class="section card" id="awards">
@@ -405,6 +455,9 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
 
 
 
