@@ -1,16 +1,17 @@
-﻿/* styles.css - 深色主题优先的个人主页样式 */
+﻿/* styles.css - 白色+彩色主题 */
 
 :root {
-  --bg: #0f172a;
-  --panel: #111827;
-  --panel-soft: #1f2937;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --primary: #38bdf8;
-  --primary-strong: #0ea5e9;
-  --accent: #a78bfa;
-  --border: #334155;
-  --shadow: 0 8px 28px rgba(2, 8, 23, 0.35);
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-soft: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #0ea5e9;
+  --primary-strong: #0284c7;
+  --accent: #f43f5e;
+  --border: #dbe3ee;
+  --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  --rainbow: linear-gradient(120deg, #0ea5e9, #f43f5e, #10b981, #6366f1);
 }
 
 * {
@@ -21,12 +22,15 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", "Noto Sans SC", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background:
-    radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.13), transparent 32%),
-    radial-gradient(circle at 90% 20%, rgba(167, 139, 250, 0.1), transparent 25%),
-    linear-gradient(180deg, #0b1120 0%, var(--bg) 100%);
+    radial-gradient(circle at 8% 0%, rgba(14, 165, 233, 0.16), transparent 35%),
+    radial-gradient(circle at 95% 14%, rgba(244, 63, 94, 0.14), transparent 28%),
+    radial-gradient(circle at 78% 86%, rgba(16, 185, 129, 0.12), transparent 32%),
+    linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+  background-size: 130% 130%;
   color: var(--text);
+  animation: skyShift 16s ease-in-out infinite;
 }
 
 img {
@@ -39,14 +43,14 @@ img {
   margin: 0 auto;
 }
 
-/* 导航栏 */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: blur(8px);
-  background: rgba(15, 23, 42, 0.78);
-  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.75);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .navbar {
@@ -57,7 +61,7 @@ img {
 }
 
 .brand {
-  color: var(--text);
+  color: var(--primary-strong);
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.2px;
@@ -75,14 +79,32 @@ img {
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
+  position: relative;
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  color: var(--primary);
+  color: var(--accent);
 }
 
-/* 简介模块 */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--rainbow);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+  transform: scaleX(1);
+}
+
 .hero {
   padding: 4.5rem 0 2.5rem;
   display: grid;
@@ -95,9 +117,13 @@ img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 3px solid var(--primary);
+  border: 3px solid #ffffff;
   object-fit: cover;
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 0 0 3px rgba(14, 165, 233, 0.28),
+    0 0 0 7px rgba(244, 63, 94, 0.16),
+    var(--shadow);
+  animation: floatAvatar 4.8s ease-in-out infinite;
 }
 
 .eyebrow {
@@ -118,12 +144,34 @@ img {
 
 .mini-meta {
   margin-top: 0.35rem;
-  color: #bfdbfe;
+  color: #0369a1;
 }
 
-/* 通用 section 样式 */
 section {
   padding: 1rem 0 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealUp 0.7s ease forwards;
+}
+
+main section:nth-of-type(1) {
+  animation-delay: 0.05s;
+}
+
+main section:nth-of-type(2) {
+  animation-delay: 0.13s;
+}
+
+main section:nth-of-type(3) {
+  animation-delay: 0.21s;
+}
+
+main section:nth-of-type(4) {
+  animation-delay: 0.29s;
+}
+
+main section:nth-of-type(5) {
+  animation-delay: 0.37s;
 }
 
 section h2 {
@@ -131,7 +179,6 @@ section h2 {
   font-size: 1.5rem;
 }
 
-/* 技能标签 */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -139,15 +186,16 @@ section h2 {
 }
 
 .tag {
-  background: var(--panel-soft);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: linear-gradient(135deg, #e0f2fe 0%, #ffe4e6 55%, #dcfce7 100%);
+  border: 1px solid #bfdbfe;
+  color: #0f172a;
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
   font-size: 0.95rem;
+  background-size: 180% 180%;
+  animation: hueFlow 5.2s ease-in-out infinite;
 }
 
-/* 项目列表（可展开） */
 .project-list {
   margin: 0;
   padding: 0;
@@ -158,11 +206,18 @@ section h2 {
 }
 
 .project-item {
-  background: var(--panel);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 0.85rem 1rem;
   box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+  border-color: #bfdbfe;
 }
 
 .project-item summary {
@@ -172,7 +227,7 @@ section h2 {
 }
 
 .project-item[open] summary {
-  color: var(--primary);
+  color: var(--primary-strong);
 }
 
 .project-item p {
@@ -192,32 +247,104 @@ section h2 {
 .contact a:hover,
 .project-item a:focus-visible,
 .contact a:focus-visible {
-  color: var(--accent);
+  color: #be123c;
 }
 
 .contact p {
   margin: 0.5rem 0;
 }
 
-.awards {
-  margin-top: 0.9rem;
-  padding: 0.8rem 0.9rem;
-  border-left: 3px solid var(--primary);
-  background: rgba(17, 24, 39, 0.75);
-  border-radius: 8px;
-  color: #cbd5e1;
+.awards-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
 }
 
-/* 页脚 */
+.award-item {
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid #c7d2fe;
+  background: linear-gradient(120deg, rgba(224, 242, 254, 0.9), rgba(254, 242, 242, 0.9));
+  color: #1e293b;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  animation: awardPulse 4.2s ease-in-out infinite;
+}
+
+.award-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.award-item:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.award-item:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
 .site-footer {
-  border-top: 1px solid rgba(51, 65, 85, 0.5);
+  border-top: 1px solid rgba(203, 213, 225, 0.85);
   margin-top: 2rem;
   padding: 1.2rem 0 2rem;
   text-align: center;
   color: var(--muted);
 }
 
-/* 响应式：平板/手机 */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skyShift {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes floatAvatar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hueFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes awardPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  }
+  50% {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px rgba(14, 165, 233, 0.12);
+  }
+}
+
 @media (max-width: 680px) {
   .navbar {
     flex-direction: column;

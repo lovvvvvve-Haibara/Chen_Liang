@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 页头：导航 -->
     <header class="site-header" id="home">
       <nav class="navbar container" aria-label="主导航">
         <a class="brand" href="#home">Liang Chen</a>
@@ -19,13 +18,13 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#awards">Awards</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <!-- 简介 -->
       <section class="hero container" id="about">
         <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
         <div class="hero-text">
@@ -41,7 +40,6 @@
         </div>
       </section>
 
-      <!-- 技能 -->
       <section class="skills container" aria-labelledby="skills-title">
         <h2 id="skills-title">Skills</h2>
         <div class="skill-tags">
@@ -54,13 +52,16 @@
         </div>
       </section>
 
-      <!-- 项目：列表+点击展开 -->
       <section class="projects container" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
         <ul class="project-list">
           <li>
             <details class="project-item">
               <summary>SeekTouch 实验室｜AI 用户研究（团队负责人）</summary>
+              <div class="project-media-slot">
+                <span>项目图片插槽（可选）</span>
+                <!-- 示例：<img src="images/project-seektouch-1.jpg" alt="SeekTouch 项目截图" /> -->
+              </div>
               <p>
                 时间：2023.10 - 2025.3。围绕风电运维场景，主导 AI 对话系统用户研究，搭建“访谈-编码-建模”流程，推动模型策略优化。
                 项目沉淀了可复用的用户画像与行为分析方法，并产出高优先级优化方向。
@@ -74,6 +75,10 @@
           <li>
             <details class="project-item">
               <summary>“林下客”AI 林下经济管理生态（负责人 / 产品策划 / 开发）</summary>
+              <div class="project-media-slot">
+                <span>项目图片插槽（可选）</span>
+                <!-- 示例：<img src="images/project-linxiake-1.jpg" alt="林下客平台页面截图" /> -->
+              </div>
               <p>
                 时间：2025.1 - 2026.3。负责从 0 到 1 构建 Web + App 小程序闭环，覆盖数据采集、信贷风控与智能问答，累计服务 3000+
                 移动用户。搭建 LLM + RAG 知识服务系统，实现政策知识与业务场景结合。
@@ -100,23 +105,29 @@
         </ul>
       </section>
 
-      <!-- 联系方式 -->
+      <section class="awards-section container" id="awards" aria-labelledby="awards-title">
+        <h2 id="awards-title">Awards</h2>
+        <ul class="awards-list">
+          <li class="award-item">全国大学生物联网设计竞赛国家级一等奖</li>
+          <li class="award-item">市场调研与分析大赛省级二等奖</li>
+          <li class="award-item">计算机设计大赛省级三等奖</li>
+          <li class="award-item">“双创之星”一等奖学金</li>
+        </ul>
+      </section>
+
       <section class="contact container" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
-        <p>Email：<a href="mailto:1033098392@qq.com">1033098392@qq.com</a></p>
-        <p>Phone：<a href="tel:13529187049">13529187049</a></p>
+        <p>Email: <a href="mailto:1033098392@qq.com">1033098392@qq.com</a></p>
+        <p>Phone: <a href="tel:13529187049">13529187049</a></p>
         <p>
-          GitHub：
+          GitHub:
           <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">https://github.com/your-username</a>
-        </p>
-        <p class="awards">
-          🏆 代表荣誉：全国大学生物联网设计竞赛国家级一等奖、市场调研与分析大赛省二、计算机设计大赛省三、“双创之星”一等奖学金。
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Liang Chen · Made with curiosity & coffee ☕</p>
+      <p>© 2026 Liang Chen · Made with curiosity & coffee</p>
     </footer>
   </body>
 </html>
