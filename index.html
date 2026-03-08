@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="梁辰的个人主页：技术型 AI 产品经理，聚焦 AI 产品设计、用户研究与落地开发。"
+      content="梁辰个人简历主页：技术型 AI 产品经理候选人，聚焦 AI 产品设计、用户研究与工程落地。"
     />
-    <title>梁辰 | 技术型 AI 产品经理</title>
+    <title>梁辰 | 个人简历</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header" id="home">
       <nav class="navbar container" aria-label="主导航">
-        <a class="brand" href="#home">Liang Chen</a>
+        <a class="brand" href="#home">梁辰</a>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#education">教育背景</a></li>
+          <li><a href="#projects">项目经历</a></li>
+          <li><a href="#skills">技能与工具</a></li>
+          <li><a href="#ai">AI 能力</a></li>
+          <li><a href="#awards">获奖情况</a></li>
+          <li><a href="#contact">联系方式</a></li>
         </ul>
       </nav>
     </header>
@@ -29,134 +30,279 @@
       <section class="hero container" id="about">
         <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
         <div class="hero-text">
-          <h1>Hi，我是梁辰 👋</h1>
-          <p>
-            深圳大学计算机科学与技术专业在读（2023.9 - 2027.6），目前主攻
-            <strong>AI 产品设计 + 工程落地</strong>。
-            我喜欢把“复杂技术”做成“用户真的愿意用”的产品，擅长从用户研究到 PRD、再到前后端协作的全流程推进。
-          </p>
-          <p class="mini-meta">
-            🎓 GPA 3.8/4.5（专业前列）｜🎯 求职方向：技术型 AI 产品经理
-          </p>
+          <h1>梁辰</h1>
+          <p class="hero-role">求职意向：技术型 AI 产品经理</p>
+          <ul class="hero-facts">
+            <li><strong>年龄：</strong>22</li>
+            <li><strong>邮箱：</strong><a href="mailto:1033098392@qq.com">1033098392@qq.com</a></li>
+            <li><strong>电话：</strong><a href="tel:13529187049">13529187049</a></li>
+            <li><strong>GPA：</strong>3.8/4.5</li>
+            <li><strong>专业排名：</strong>29</li>
+          </ul>
         </div>
       </section>
 
       <section class="education container" id="education" aria-labelledby="education-title">
-        <h2 id="education-title">Education</h2>
+        <h2 id="education-title">教育背景</h2>
         <article class="education-card">
-          <h3>深圳大学（Shenzhen University）</h3>
-          <p class="education-time">就读时间：2023.09 - 2027.06（本科）</p>
-          <p>
-            深圳大学是一所位于深圳的综合性大学，注重产学研结合与创新实践。我在计算机科学与技术专业学习，
-            重点聚焦 AI 产品设计、工程实现与跨团队协作能力建设。
-          </p>
+          <div class="education-head">
+            <img class="edu-logo" src="images/SZU_logo.png" alt="深圳大学校徽" />
+            <div>
+              <h3>深圳大学 · 计算机科学与技术专业（本科）</h3>
+              <p class="education-time">2023.09 - 2027.06</p>
+            </div>
+          </div>
+          <p>荣获校级“双创之星”奖学金一等奖。</p>
+
+          <div class="course-matrix">
+            <details class="course-group" open>
+              <summary>
+                <span>计算机核心课程</span>
+                <span class="course-count">6+</span>
+              </summary>
+              <div class="course-tags">
+                <span class="keyword-bubble">数据库系统（A）</span>
+                <span class="keyword-bubble">计算机系统（A*）</span>
+                <span class="keyword-bubble">数据结构（A）</span>
+                <span class="keyword-bubble">软件工程（A）</span>
+                <span class="keyword-bubble">数据科学导论（A）</span>
+                <span class="keyword-bubble">计算机视觉（A）</span>
+              </div>
+            </details>
+
+            <details class="course-group" open>
+              <summary>
+                <span>商科与研究方法课程</span>
+                <span class="course-count">3+</span>
+              </summary>
+              <div class="course-tags">
+                <span class="keyword-bubble">管理学原理（A）</span>
+                <span class="keyword-bubble">微观经济学（A）</span>
+                <span class="keyword-bubble">质性研究方法（B*）</span>
+              </div>
+            </details>
+
+            <details class="course-group">
+              <summary>
+                <span>预留分组（可继续扩展）</span>
+                <span class="course-count">0</span>
+              </summary>
+              <div class="course-tags">
+                <span class="keyword-bubble">可继续新增课程标签</span>
+              </div>
+            </details>
+          </div>
         </article>
       </section>
 
-      <section class="skills container" aria-labelledby="skills-title">
-        <h2 id="skills-title">Skills</h2>
-        <div class="skill-tags">
-          <span class="tag">AI 产品设计（PRD / 原型 / 用户旅程）</span>
-          <span class="tag">用户研究与数据分析</span>
-          <span class="tag">Prompt 设计 & RAG 流程</span>
-          <span class="tag">Java / Kotlin / Python</span>
-          <span class="tag">Spring Boot / Vue / MySQL</span>
-          <span class="tag">Web & Android 协同开发</span>
-        </div>
-      </section>
-
       <section class="projects container" id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
+        <h2 id="projects-title">项目经历</h2>
         <ul class="project-list">
           <li>
             <details class="project-item">
-              <summary>SeekTouch 实验室｜AI 用户研究（团队负责人）</summary>
-              <div class="project-media-slot">
-                <span>项目图片插槽（可选）</span>
-                <!-- 示例：<img src="images/project-seektouch-1.jpg" alt="SeekTouch 项目截图" /> -->
+              <summary>
+                <span class="project-summary-title">AI 用户研究——管理学院 SeekTouch 实验室（团队负责人）</span>
+              </summary>
+              <div class="project-content">
+                <div class="project-content-inner">
+                  <p class="project-time">2023.10 - 2025.03</p>
+                  <div class="project-media-slot">
+                    <span>项目图片插槽（可选）</span>
+                  </div>
+                  <ul class="project-points">
+                    <li>在导师指导下，围绕“AI 外语口语学习”场景开展用户研究，采用扎根理论完成“访谈—编码—建模”流程。</li>
+                    <li>组织团队完成 3000 份问卷数据分析，形成结构化研究报告并识别关键痛点。</li>
+                    <li>结合有道 Hi Echo 等产品场景，评估 AI 对学习效果影响并提出优化方向。</li>
+                    <li>带队参加全国大学生市场调研与分析大赛，输出市场研究报告与产品策略建议。</li>
+                  </ul>
+                </div>
               </div>
-              <p>
-                时间：2023.10 - 2025.3。围绕风电运维场景，主导 AI 对话系统用户研究，搭建“访谈-编码-建模”流程，推动模型策略优化。
-                项目沉淀了可复用的用户画像与行为分析方法，并产出高优先级优化方向。
-              </p>
-              <p>
-                项目地址：
-                <a href="https://github.com/your-username/seektouch-ai-research" target="_blank" rel="noopener noreferrer">https://github.com/your-username/seektouch-ai-research</a>
-              </p>
             </details>
           </li>
+
           <li>
             <details class="project-item">
-              <summary>“林下客”AI 林下经济管理生态（负责人 / 产品策划 / 开发）</summary>
-              <div class="project-media-slot">
-                <span>项目图片插槽（可选）</span>
-                <!-- 示例：<img src="images/project-linxiake-1.jpg" alt="林下客平台页面截图" /> -->
+              <summary>
+                <span class="project-summary-title">AI 产品实践——“林下客”AI 林下经济管理生态（团队负责人 / AI 产品策划 / 开发）</span>
+              </summary>
+              <div class="project-content">
+                <div class="project-content-inner">
+                  <p class="project-time">2025.01 - 2026.03</p>
+                  <div class="project-media-slot">
+                    <span>项目图片插槽（可选）</span>
+                  </div>
+                  <ul class="project-points">
+                    <li>主导设计开发 AI 驱动平台（Web + App + 小程序），解决云南乡镇林下经济管理中的信息与效率问题。</li>
+                    <li>平台累计服务 3000+ 移动端用户，覆盖云南 8 个地州市。</li>
+                    <li>设计 LLM + RAG 知识服务系统，实现政策解读、种植建议、病虫害咨询等智能问答。</li>
+                    <li>参与全栈开发（Vue3 / Spring Boot / Kotlin），并推进知识库接入与接口设计。</li>
+                    <li>主导 PRD 与版本规划，推动 3 轮迭代；调研收集 100+ 用户反馈持续优化。</li>
+                    <li>项目获深圳大学专项经费资助 16000 元。</li>
+                  </ul>
+                  <div class="project-keywords">
+                    <span class="keyword-bubble">Spring Boot</span>
+                    <span class="keyword-bubble">Vue</span>
+                    <span class="keyword-bubble">Android Kotlin</span>
+                    <span class="keyword-bubble">MySQL</span>
+                    <span class="keyword-bubble">RESTful API</span>
+                    <span class="keyword-bubble">LLM + RAG</span>
+                  </div>
+                </div>
               </div>
-              <p>
-                时间：2025.1 - 2026.3。负责从 0 到 1 构建 Web + App 小程序闭环，覆盖数据采集、信贷风控与智能问答，累计服务 3000+
-                移动用户。搭建 LLM + RAG 知识服务系统，实现政策知识与业务场景结合。
-              </p>
-              <p>
-                项目地址：
-                <a href="https://github.com/your-username/linxia-ke-ai-platform" target="_blank" rel="noopener noreferrer">https://github.com/your-username/linxia-ke-ai-platform</a>
-              </p>
             </details>
           </li>
+
           <li>
             <details class="project-item">
-              <summary>校园 AI 助手实践｜课程/竞赛知识助手</summary>
-              <p>
-                将 ChatGPT、Coze、Cursor 等工具串联到学习工作流，沉淀 Prompt 模版与知识库结构，支持资料检索、任务拆解、周报生成等高频场景。
-                目标是让“会用 AI”变成“稳定高效地用 AI”。
-              </p>
-              <p>
-                项目地址：
-                <a href="https://github.com/your-username/campus-ai-assistant" target="_blank" rel="noopener noreferrer">https://github.com/your-username/campus-ai-assistant</a>
-              </p>
+              <summary>
+                <span class="project-summary-title">A Survey of Long-Sequence Time-Series Forecasting Methods Based on Deep Learning</span>
+              </summary>
+              <div class="project-content">
+                <div class="project-content-inner">
+                  <p class="project-time">研究文档 / Survey Paper</p>
+                  <p>
+                    <strong>Abstract：</strong>
+                    Long-sequence time-series forecasting (LSTF) is crucial for many real-world applications but remains challenging due to long-range dependencies, non-stationarity, noise, and error accumulation over long horizons. This work surveys recent deep learning approaches for LSTF and organizes them into several key methodological directions.
+                  </p>
+                  <div class="project-keywords">
+                    <span class="keyword-bubble">Long-sequence time-series forecasting</span>
+                    <span class="keyword-bubble">Deep learning</span>
+                    <span class="keyword-bubble">Transformers</span>
+                    <span class="keyword-bubble">Multi-resolution modeling</span>
+                    <span class="keyword-bubble">Graph neural networks</span>
+                    <span class="keyword-bubble">Foundation models</span>
+                    <span class="keyword-bubble">Robust forecasting</span>
+                    <span class="keyword-bubble">Uncertainty quantification</span>
+                  </div>
+                  <p>
+                    文档：
+                    <a href="document/Survey%20of%20long%20sequence%20time-series%20forecasting%20by%20deep%20learning.pdf" target="_blank" rel="noopener noreferrer">Survey of long sequence time-series forecasting by deep learning.pdf</a>
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="project-item">
+              <summary>
+                <span class="project-summary-title">基于语义保持改写的欺诈对话检测模型鲁棒性分析</span>
+              </summary>
+              <div class="project-content">
+                <div class="project-content-inner">
+                  <p class="project-time">研究文档 / NLP Robustness</p>
+                  <p>
+                    <strong>摘要：</strong>
+                    随着互联网金融与智能客服系统的发展，欺诈行为逐渐从单轮文本演变为多轮交互式对话。本文基于语义保持改写，对欺诈对话检测模型鲁棒性进行系统分析，并引入 ABP 框架生成同义词替换型对抗样本，比较原始数据与改写数据上的性能差异。
+                  </p>
+                  <div class="project-keywords">
+                    <span class="keyword-bubble">欺诈对话检测</span>
+                    <span class="keyword-bubble">对抗样本</span>
+                    <span class="keyword-bubble">语义保持改写</span>
+                    <span class="keyword-bubble">文本分类鲁棒性</span>
+                    <span class="keyword-bubble">自然语言处理</span>
+                  </div>
+                  <p>
+                    文档：
+                    <a href="document/面向欺诈对话检测的查询高效黑盒对抗改写.pdf" target="_blank" rel="noopener noreferrer">面向欺诈对话检测的查询高效黑盒对抗改写.pdf</a>
+                  </p>
+                </div>
+              </div>
             </details>
           </li>
         </ul>
       </section>
 
+      <section class="skills container" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">技能与工具</h2>
+        <div class="skill-groups">
+          <article class="skill-group">
+            <h3>产品能力</h3>
+            <ul>
+              <li>用户调研（深度访谈 / 问卷设计 / 扎根理论分析）</li>
+              <li>产品需求拆解与功能设计</li>
+              <li>商业模式设计与商业计划书撰写</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>技术能力</h3>
+            <ul>
+              <li>C / C++ / Python / Java / Kotlin</li>
+              <li>熟悉 SpringBoot、Vue3</li>
+              <li>熟悉 Web / Android 开发流程</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>工具能力</h3>
+            <ul>
+              <li>SPSS 数据分析</li>
+              <li>Linux 基本操作</li>
+              <li>常见 IDE</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>语言能力</h3>
+            <ul>
+              <li>CET-6</li>
+              <li>IELTS 6.0</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="ai container" id="ai" aria-labelledby="ai-title">
+        <h2 id="ai-title">AI 技能</h2>
+        <div class="skill-groups">
+          <article class="skill-group">
+            <h3>AI 产品能力</h3>
+            <p>可基于行业场景与用户需求完成 AI 功能设计，具备结构化 Prompt 设计经验，并掌握 RAG 系统架构与知识库集成流程。</p>
+          </article>
+          <article class="skill-group">
+            <h3>AI 编程能力</h3>
+            <p>熟悉 Web 与 Android Kotlin 全栈开发流程，能够设计和实现高效 API，支持前后端与 AI 系统协同。</p>
+          </article>
+          <article class="skill-group">
+            <h3>AI 工具</h3>
+            <p>熟练使用 ChatGPT、Coze、Cursor，并应用于产品设计、知识库接入与 AI 功能实现。</p>
+          </article>
+        </div>
+      </section>
+
       <section class="awards-section container" id="awards" aria-labelledby="awards-title">
-        <h2 id="awards-title">Awards</h2>
+        <h2 id="awards-title">获奖情况</h2>
         <ul class="awards-list">
           <li class="award-item">
-            <span class="award-time">2025</span>
+            <span class="award-time">2023.04</span>
+            <span class="award-name">全国大学生市场调研与分析大赛</span>
+            <span class="award-level">省级三等奖</span>
+          </li>
+          <li class="award-item">
+            <span class="award-time">2025.04</span>
+            <span class="award-name">大学生计算机设计大赛</span>
+            <span class="award-level">省级三等奖</span>
+          </li>
+          <li class="award-item">
+            <span class="award-time">2025.09</span>
             <span class="award-name">全国大学生物联网设计竞赛</span>
             <span class="award-level">国家级一等奖</span>
           </li>
           <li class="award-item">
-            <span class="award-time">2024</span>
-            <span class="award-name">市场调研与分析大赛</span>
-            <span class="award-level">省级二等奖</span>
-          </li>
-          <li class="award-item">
-            <span class="award-time">2024</span>
-            <span class="award-name">计算机设计大赛</span>
-            <span class="award-level">省级三等奖</span>
-          </li>
-          <li class="award-item">
-            <span class="award-time">2023</span>
-            <span class="award-name">“双创之星”奖学金</span>
+            <span class="award-time">2025.10</span>
+            <span class="award-name">深圳大学“双创之星”奖学金</span>
             <span class="award-level">一等奖</span>
           </li>
         </ul>
       </section>
 
       <section class="contact container" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
+        <h2 id="contact-title">联系方式</h2>
         <p>Email: <a href="mailto:1033098392@qq.com">1033098392@qq.com</a></p>
         <p>Phone: <a href="tel:13529187049">13529187049</a></p>
-        <p>
-          GitHub:
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">https://github.com/your-username</a>
-        </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Liang Chen · Made with curiosity & coffee</p>
+      <p>© 2026 Liang Chen · Personal Resume</p>
     </footer>
   </body>
 </html>
