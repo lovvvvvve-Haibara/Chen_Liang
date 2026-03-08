@@ -1,0 +1,8 @@
+# Keep repository diff-friendly (text-first)
+* text=auto eol=lf
+
+# Explicitly treat web source files as text
+*.html text
+*.css text
+*.md text
+*.svg text
