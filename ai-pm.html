@@ -5,35 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="梁辰个人简历入口页：选择 AI 产品经理或全栈工程师方向。"
+      content="梁辰个人简历主页：技术型 AI 产品经理候选人，聚焦 AI 产品设计、用户研究与工程落地。"
     />
-    <title>梁辰 | 职业方向选择</title>
+    <title>梁辰 | 个人简历</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="entry-page">
+  <body>
     <div class="ambient ambient-a" aria-hidden="true"></div>
     <div class="ambient ambient-b" aria-hidden="true"></div>
     <div class="ambient ambient-c" aria-hidden="true"></div>
 
-    <section class="entry-intro" id="entry-intro" aria-label="开场对话">
-      <div class="entry-intro-inner">
-        <p class="entry-intro-kicker">HELLO</p>
-        <div class="entry-intro-stream" id="entry-intro-stream" aria-live="polite">
-          <div class="entry-intro-history" id="entry-intro-history"></div>
-          <p class="entry-intro-text" id="entry-intro-text"></p>
-        </div>
-        <button class="entry-intro-skip" id="entry-intro-skip" type="button">跳过</button>
-      </div>
+    <header class="site-header" id="home">
+      <nav class="navbar container" aria-label="主导航">
+        <a class="brand" href="#about">梁辰</a>
+        <ul class="nav-links">
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#education">教育背景</a></li>
+          <li><a href="#projects">项目经历</a></li>
+          <li><a href="#capability">能力体系</a></li>
+          <li><a href="#awards">获奖情况</a></li>
+          <li><a href="#contact">联系方式</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="motto-bar" aria-label="个人格言">
+      <p class="motto-typewriter" data-texts="理解用户，构建未来。|Understand users, build the future.|代码连接世界，AI赋能未来。|Code connects the world, AI empowers the future."></p>
     </section>
+
+    <main class="container">
+      <section class="hero" id="about">
+        <div class="hero-main card">
+          <p class="kicker hero-identity">TECH-ORIENTED AI PM CANDIDATE</p>
+
+          <h1 class="hero-name">
+            <span class="name-cn">梁辰</span>
+            <span class="name-en">Chen-Liang</span>
+          </h1>
+
+          <div class="hero-position" aria-label="职业定位">
+            <span>技术型 AI 产品经理</span>
+            <span>AI Product Manager</span>
+          </div>
+
+          <div class="hero-skill-tags" aria-label="核心能力标签">
+            <span class="hero-chip">用户研究</span>
+            <span class="hero-chip">产品设计</span>
+            <span class="hero-chip">工程落地</span>
+            <span class="hero-chip">AI系统</span>
+            <span class="hero-chip">Web开发</span>
+            <span class="hero-chip">Android开发</span>
+            <span class="hero-chip">RAG</span>
+            <span class="hero-chip">Prompt Engineering</span>
+          </div>
+
+          <ul class="hero-summary-list">
+            <li>具备计算机与商科复合背景，能够连接用户需求、产品设计与技术实现。</li>
+            <li>拥有 0-1 产品规划、用户研究、需求拆解与跨团队协作经验。</li>
+            <li>聚焦 AI 产品设计与工程落地，擅长推动从需求洞察到迭代验证的完整闭环。</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">查看项目</a>
+            <a class="btn btn-secondary" href="document/CV.pdf" download>下载简历</a>
+            <a class="btn btn-secondary" href="#contact">联系我</a>
+            <a class="btn btn-secondary" href="index.html">返回职业选择</a>
+          </div>
+        </div>
 
         <aside class="hero-side hero-profile-card card" aria-label="个人摘要卡">
           <div class="avatar-wrap">
             <img class="avatar" src="images/Chen_Liang.jpg" alt="梁辰头像" />
           </div>
 
-          <div class="stat-grid" aria-label="核心数据">
+                    <div class="stat-grid" aria-label="核心数据">
             <article class="stat-item">
-              <strong class="stat-value" data-value="21" data-decimals="0">
+              <strong class="stat-value" data-value="22" data-decimals="0">
                 <span class="stat-main">22</span>
               </strong>
               <span>年龄</span>
@@ -51,13 +98,32 @@
               </strong>
               <span>排名</span>
             </article>
-          </div>
-        </aside>
+            <article class="stat-item">
+              <strong class="stat-value" data-value="3000" data-decimals="0">
+                <span class="stat-main">3000</span>
+                <span class="stat-suffix">+</span>
+              </strong>
+              <span>服务用户</span>
+            </article>
+            <article class="stat-item">
+              <strong class="stat-value" data-value="8" data-decimals="0">
+                <span class="stat-main">8</span>
+              </strong>
+              <span>覆盖地州市</span>
+            </article>
+            <article class="stat-item">
+              <strong class="stat-value" data-value="3" data-decimals="0">
+                <span class="stat-main">3</span>
+              </strong>
+              <span>迭代周期</span>
+            </article>
+          </div>        </aside>
       </section>
 
       <section class="section card" id="education">
         <div class="section-head">
           <h2>教育背景</h2>
+          <p>课程采用“分组折叠 + 气泡标签”结构，后续可持续扩展。</p>
         </div>
 
         <article class="edu-overview">
@@ -164,32 +230,15 @@
         </div>
       </section>
 
-    <main class="entry-shell container">
-      <section class="entry-hero card" aria-label="职业入口">
-        <p class="kicker">CHOOSE YOUR VIEW</p>
-        <h1>梁辰 · 个人简历入口</h1>
-        <p class="entry-subtitle">请选择你希望查看的职业版本</p>
-
-        <div class="entry-grid">
-          <a class="entry-card" href="ai-pm.html" aria-label="进入 AI 产品经理页面">
-            <h2>AI 产品经理</h2>
-            <p>聚焦用户研究、产品设计、AI 能力规划与跨团队落地。</p>
-            <span class="entry-link">进入页面</span>
-          </a>
-
-          <a class="entry-card" href="fullstack.html" aria-label="进入全栈工程师页面">
-            <h2>全栈工程师</h2>
-            <p>聚焦前后端开发、系统实现、AI 工程集成与上线交付。</p>
-            <span class="entry-link">进入页面</span>
-          </a>
       <section class="section card" id="projects">
         <div class="section-head">
           <h2>项目经历</h2>
+          <p>默认仅显示标题，点击展开详情；关键词统一使用气泡标签。</p>
         </div>
 
         <ul class="project-list">
           <li>
-            <details class="project-item">
+            <details class="project-item is-highlight-pm">
               <summary>
                 <span class="title">AI 用户研究——管理学院 SeekTouch 实验室（团队负责人）</span>
                 <span class="meta">2023.10 - 2025.03</span>
@@ -219,7 +268,7 @@
           </li>
 
           <li>
-            <details class="project-item">
+            <details class="project-item is-highlight-pm">
               <summary>
                 <span class="title">AI 产品实践——“林下客”AI 林下经济管理生态（团队负责人 / AI 产品策划 / 开发）</span>
                 <span class="meta">2025.01 - 2026.03</span>
@@ -596,12 +645,32 @@
           <h2>联系方式</h2>
           <p>欢迎联系交流 AI 产品、用户研究与技术落地。</p>
         </div>
+        <p>Email: <a href="mailto:1033098392@qq.com">1033098392@qq.com</a></p>
+        <p>Phone: <a href="tel:13529187049">13529187049</a></p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Liang Chen · Resume Entry</p>
+      <p>© 2026 Liang Chen · Personal Resume</p>
     </footer>
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
