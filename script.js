@@ -462,7 +462,205 @@
     runLine(0);
   }
 
+
+  function initWebParticleEffect() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var existing = document.getElementById('particleCanvas');
+    var canvas = existing || document.createElement('canvas');
+
+    if (!existing) {
+      canvas.id = 'particleCanvas';
+      document.body.insertBefore(canvas, document.body.firstChild);
+    }
+
+    function ParticleBackground(targetCanvas) {
+      this.config = {
+        baseDensity: 35,
+        maxParticles: 150,
+        particleSpeed: 0.4,
+        lineMaxDistance: 120,
+        lineOpacity: 0.22,
+        mouseRadius: 180,
+        maxConnections: 4,
+        mobileFactor: 1.8
+      };
+
+      this.canvas = targetCanvas;
+      this.ctx = this.canvas.getContext('2d');
+      this.particles = [];
+      this.mouse = { x: null, y: null };
+      this.animationFrame = 0;
+      this.palette = ['#4CAF50', '#2196F3', '#E91E63', '#FFC107'];
+      this.init();
+    }
+
+    ParticleBackground.prototype.init = function () {
+      this.resizeCanvas();
+      this.createParticles(true);
+      this.bindEvents();
+      this.animate();
+    };
+
+    ParticleBackground.prototype.bindEvents = function () {
+      var self = this;
+
+      window.addEventListener('resize', function () {
+        self.resizeCanvas();
+      });
+
+      window.addEventListener('mousemove', function (event) {
+        self.mouse.x = event.clientX;
+        self.mouse.y = event.clientY;
+      });
+
+      window.addEventListener('mouseout', function () {
+        self.mouse.x = null;
+        self.mouse.y = null;
+      });
+    };
+
+    ParticleBackground.prototype.resizeCanvas = function () {
+      this.canvas.width = window.innerWidth;
+      this.canvas.height = window.innerHeight;
+      this.createParticles(true);
+    };
+
+    ParticleBackground.prototype.createParticles = function (reset) {
+      if (reset) {
+        this.particles = [];
+      }
+
+      var particleCount = Math.floor(window.innerWidth / this.config.baseDensity);
+      particleCount = Math.min(particleCount, this.config.maxParticles);
+
+      if (window.innerWidth < 768) {
+        particleCount = Math.floor(particleCount / this.config.mobileFactor);
+      }
+
+      for (var i = 0; i < particleCount; i += 1) {
+        this.particles.push({
+          x: Math.random() * this.canvas.width,
+          y: Math.random() * this.canvas.height,
+          vx: (Math.random() - 0.5) * this.config.particleSpeed,
+          vy: (Math.random() - 0.5) * this.config.particleSpeed,
+          radius: Math.random() * 1.5 + 1,
+          color: this.palette[Math.floor(Math.random() * this.palette.length)]
+        });
+      }
+    };
+
+    ParticleBackground.prototype.drawParticle = function (particle) {
+      this.ctx.beginPath();
+      this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+      this.ctx.fillStyle = particle.color;
+      this.ctx.fill();
+    };
+
+    ParticleBackground.prototype.updateParticle = function (particle) {
+      if (particle.x < 0 || particle.x > this.canvas.width) {
+        particle.vx *= -1;
+      }
+      if (particle.y < 0 || particle.y > this.canvas.height) {
+        particle.vy *= -1;
+      }
+
+      if (this.mouse.x !== null && this.mouse.y !== null) {
+        var dx = particle.x - this.mouse.x;
+        var dy = particle.y - this.mouse.y;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.config.mouseRadius) {
+          var force = (this.config.mouseRadius - distance) / this.config.mouseRadius;
+          particle.x -= dx * force * 0.01;
+          particle.y -= dy * force * 0.01;
+        }
+      }
+
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+    };
+
+    ParticleBackground.prototype.drawConnection = function (particleA, particleB, distance) {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var baseColor = isDark ? '255,255,255' : '15,23,42';
+      var opacity = (1 - distance / this.config.lineMaxDistance) * this.config.lineOpacity;
+
+      this.ctx.beginPath();
+      this.ctx.strokeStyle = 'rgba(' + baseColor + ',' + opacity + ')';
+      this.ctx.lineWidth = 1;
+      this.ctx.moveTo(particleA.x, particleA.y);
+      this.ctx.lineTo(particleB.x, particleB.y);
+      this.ctx.stroke();
+    };
+
+    ParticleBackground.prototype.animate = function () {
+      var self = this;
+
+      self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
+      var connectionCount = new Map();
+
+      self.particles.forEach(function (particle) {
+        connectionCount.set(particle, 0);
+      });
+
+      self.particles.forEach(function (particle, index) {
+        var neighbors = [];
+
+        for (var i = index + 1; i < self.particles.length; i += 1) {
+          var other = self.particles[i];
+          var dx = particle.x - other.x;
+          var dy = particle.y - other.y;
+          var distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < self.config.lineMaxDistance) {
+            neighbors.push({ other: other, distance: distance });
+          }
+        }
+
+        neighbors
+          .sort(function (a, b) { return a.distance - b.distance; })
+          .slice(0, self.config.maxConnections)
+          .forEach(function (item) {
+            var other = item.other;
+
+            if (
+              connectionCount.get(particle) < self.config.maxConnections &&
+              connectionCount.get(other) < self.config.maxConnections
+            ) {
+              self.drawConnection(particle, other, item.distance);
+              connectionCount.set(particle, connectionCount.get(particle) + 1);
+              connectionCount.set(other, connectionCount.get(other) + 1);
+            }
+          });
+      });
+
+      self.particles.forEach(function (particle) {
+        self.updateParticle(particle);
+        self.drawParticle(particle);
+      });
+
+      if (self.mouse.x !== null && self.mouse.y !== null) {
+        self.particles.forEach(function (particle) {
+          var dx = particle.x - self.mouse.x;
+          var dy = particle.y - self.mouse.y;
+          var distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 150 && connectionCount.get(particle) < self.config.maxConnections) {
+            self.drawConnection(particle, { x: self.mouse.x, y: self.mouse.y }, distance);
+          }
+        });
+      }
+
+      self.animationFrame = window.requestAnimationFrame(function () {
+        self.animate();
+      });
+    };
+
+    window.particleBackground = new ParticleBackground(canvas);
+  }
   function initPageEffects() {
+    initWebParticleEffect();
     initEntryIntro();
     initMottoTypewriter();
     initStatCounters();
